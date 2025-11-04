@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Text Summarizer — Instant AI Summaries</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    </head>
+    <body>
+        
+    <header>
+        <div class="nav-inner">
+        <div class="brand">
+            <img src="/static/images/logo.png" alt="Summ IT Logo" class="logo-img">
+            <div class="brand-name">SUMM<span class="highlight-i">I</span>T</div>
+        </div>
+        <!-- <nav>
+            <div class="nav-links">
+            <a href="#">Pricing</a>
+            <a href="#">API</a>
+            <a href="#">FAQ</a>
+            <a class="cta" href="#">Sign Up</a>
+            </div>
+        </nav>
+        </div> -->
+    </header>
+
+    <main>
+        <section class="hero">
+        <div class="headline">
+            <h1>Summarize Any Text Instantly. Save Time, Get the Gist.</h1>
+            <p>Paste, upload, or drag-and-drop. Choose summary length and get results instantly.</p>
+        </div>
+
+        <div class="editor-row">
+            <!-- Input -->
+            <div class="card">
+            <label for="inputText">Paste Your Text or Upload a File</label>
+            <div class="input-box">
+                <div id="dropzone" class="dropzone">
+                <textarea id="inputText" class="input" placeholder="Paste your text here (max 4,000 chars)" maxlength="4000"></textarea>
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-top:6px;">
+                    <div class="file-hint">Drop a .txt file here or click to upload</div>
+                    <input type="file" id="fileInput" accept=".txt" style="display:none" />
+                </div>
+                </div>
+
+                <div class="controls-row" style="justify-content:space-between;">
+                <div class="char-count" id="charCount">0 / 4,000 characters</div>
+                <button id="clearBtn" class="copy-btn" style="background:#F3F4F6;color:var(--text);font-weight:600;border:1px solid rgba(31,41,55,0.06);">Clear</button>
+                </div>
+            </div>
+            </div>
+
+            <!-- Output -->
+            <div class="card">
+            <div class="output-top">
+                <div>
+                <label for="summary">Your Instant Summary</label>
+                <div class="subtle">Results appear here after summarization</div>
+                </div>
+                <button id="copyBtn" class="copy-btn">Copy Summary</button>
+            </div>
+
+            <div id="summary" class="summary-box">
+                <div style="color:var(--muted);">No summary yet. Click "Summarize Now" to create one.</div>
+            </div>
+            </div>
+        </div>
+
+        <!-- Bottom controls -->
+        <div class="bottom-controls">
+            <div class="controls-left">
+            <div class="slider-wrap">
+                <label for="lengthRange">Summary Length: <span id="lengthLabel">Medium (30%)</span></label>
+                <input id="lengthRange" class="slider" type="range" min="10" max="50" step="5" value="30" />
+                <div style="display:flex; justify-content:space-between; font-size:13px; color:var(--muted);">
+                <span>Short</span><span>Medium</span><span>Long</span>
+                </div>
+            </div>
+            </div>
+
+            <div class="summarize-wrap">
+            <button id="summarizeBtn" class="summarize-btn">Summarize Now</button>
+            </div>
+        </div>
+        </section>
+    </main>
+
+    <script src="/static/js/main.js"></script>
+    <footer>
+    <div class="footer-container">
+        <p class="footer-author">Eng. Tasneem Elgendy</p>
+        <p class="footer-contact-text">Contact us:</p>
+        <div class="footer-icons">
+        <a href="https://web.facebook.com/yara.naser.735/" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.linkedin.com/in/tasneem-elgendy-905622203" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="https://wa.me/201111126495" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        </div>
+    </div>
+</footer>
+
+
+</body>
+</html>
