@@ -21,9 +21,17 @@ async def home(request: Request):
 async def predict(request: Request):
     data = await request.json()
     text = data.get("text", "")
-    length_percent = data.get("length_percent", 50)
+    length_percent = data.get("length_percent", 30)
+    print(f"DEBUG: Received length_percent = {length_percent}")  # <<< Test
+
     if not text:
         return JSONResponse({"error": "No text provided"}, status_code=400)
+    
+    # try:
+    #     # فقط للطباعة للتأكد من وصول القيمة
+    #     return {"received_length_percent": length_percent, "text_length": len(text)}
+    # except Exception as e:
+    #     return JSONResponse({"error": str(e)}, status_code=500)
     
     try:
         pipeline = PredictionPipeline(length_percent=length_percent)

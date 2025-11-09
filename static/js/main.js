@@ -58,6 +58,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // تغيير طول الملخص
     lengthRange.addEventListener("input", () => {
         const val = parseInt(lengthRange.value);
+
         if (val <= 20) lengthLabel.textContent = `Short (${val}%)`;
         else if (val <= 35) lengthLabel.textContent = `Medium (${val}%)`;
         else lengthLabel.textContent = `Long (${val}%)`;
@@ -70,6 +71,8 @@ document.addEventListener("DOMContentLoaded", () => {
         alert("Please enter text to summarize.");
         return;
         }
+        const length_percent = parseInt(lengthRange.value); // ← read slider value here
+        console.log("DEBUG: Sending length_percent =:", length_percent); // ← debug
 
         summarizeBtn.classList.add("loading");
         summarizeBtn.textContent = "Summarizing...";
@@ -80,7 +83,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const response = await fetch("/predict", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ text }),
+            body: JSON.stringify({ text, length_percent }),
         });
 
         const result = await response.json();

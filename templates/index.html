@@ -15,7 +15,7 @@
         <div class="nav-inner">
         <div class="brand">
             <img src="/static/images/logo.png" alt="Summ IT Logo" class="logo-img">
-            <div class="brand-name">SUMM<span class="highlight-i">I</span>T</div>
+            <div class="brand-name">SUMM <span class="highlight-i">I</span>T</div>
         </div>
         <!-- <nav>
             <div class="nav-links">
@@ -31,19 +31,19 @@
     <main>
         <section class="hero">
         <div class="headline">
-            <h1>Summarize Any Text Instantly. Save Time, Get the Gist.</h1>
-            <p>Paste, upload, or drag-and-drop. Choose summary length and get results instantly.</p>
+            <h1>Summarize Any Conversation Quickly</h1>
+            <p>Save Time, Get the Gist.</p>
         </div>
 
         <div class="editor-row">
             <!-- Input -->
             <div class="card">
-            <label for="inputText">Paste Your Text or Upload a File</label>
+            <label for="inputText">Your Text</label>
             <div class="input-box">
                 <div id="dropzone" class="dropzone">
-                <textarea id="inputText" class="input" placeholder="Paste your text here (max 4,000 chars)" maxlength="4000"></textarea>
+                <textarea id="inputText" class="input" placeholder="Paste, drop, or upload text (max 4,000 chars)" maxlength="4000"></textarea>
                 <div style="display:flex; justify-content:space-between; align-items:center; margin-top:6px;">
-                    <div class="file-hint">Drop a .txt file here or click to upload</div>
+                    <!-- <div class="file-hint">Drop a .txt file here or click to upload</div> -->
                     <input type="file" id="fileInput" accept=".txt" style="display:none" />
                 </div>
                 </div>
@@ -59,14 +59,14 @@
             <div class="card">
             <div class="output-top">
                 <div>
-                <label for="summary">Your Instant Summary</label>
-                <div class="subtle">Results appear here after summarization</div>
+                <label for="summary">Your Summary</label>
+                <!-- <div class="subtle">Results appear here after summarization</div> -->
                 </div>
                 <button id="copyBtn" class="copy-btn">Copy Summary</button>
             </div>
 
             <div id="summary" class="summary-box">
-                <div style="color:var(--muted);">No summary yet. Click "Summarize Now" to create one.</div>
+                <div style="color:var(--muted);">No summary yet. Click "Summarize Now" to generate one.</div>
             </div>
             </div>
         </div>
